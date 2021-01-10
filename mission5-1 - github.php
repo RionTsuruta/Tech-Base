@@ -130,7 +130,7 @@
         //削除ボタンが押された場合
         if(!empty($_POST["delate"])){
             $num = $_POST["num"];           //削除フォームの削除番号から値を受け取る
-　　　　　	$num=mb_convert_kana($num, 'n');//数字が大文字で入力された時、小文字に変換
+		$num=mb_convert_kana($num, 'n');//数字が大文字で入力された時、小文字に変換
             $password_delate = $_POST["password_delate"];//削除フォームのパスワードから値を受け取る
             if($num==""){//削除番号が空の場合
                 if($password_delate==""){//パスワードが空の場合
