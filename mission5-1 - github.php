@@ -179,6 +179,7 @@
         if(!empty($_POST["edit"])){
             $edit = $_POST["editnum"];                  //編集フォームの編集番号から値を受け取る
             $password_edit = $_POST["password_edit"];   //投稿フォームのパスワードから値を受け取る
+	    $edit=mb_convert_kana($edit, 'n');//数字が大文字で入力された時、小文字に変換
             if($edit==""){//編集番号が空の場合
                 if($password_edit==""){//パスワードが空の場合
                     echo "編集番号・パスワードを入力してください"."<br>";//エラーメッセージを表示
